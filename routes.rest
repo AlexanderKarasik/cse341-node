@@ -11,3 +11,56 @@ GET http://localhost:8080/contacts/644d92317139a2471d8a99ef
 
 ###
 GET http://localhost:8080/contacts/644d92627139a2471d8a99f0
+
+###
+GET https://alexanderkarasik-cse341-node-week2-py3v.onrender.com/contacts
+
+###
+GET https://alexanderkarasik-cse341-node-week2-py3v.onrender.com/contacts/644d91d07139a2471d8a99ee
+
+###
+GET https://alexanderkarasik-cse341-node-week2-py3v.onrender.com/contacts/644d92317139a2471d8a99ef
+
+###
+GET https://alexanderkarasik-cse341-node-week2-py3v.onrender.com/contacts/644d92627139a2471d8a99f0
+
+####### Week3 #########
+
+### Create contact
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Bred",
+    "lastName":"Pitt",
+    "email":"pit@test.com",
+    "favoriteColor":"Brown",
+    "birthday":"02/3/1999"
+}
+
+### Update contact
+PUT http://localhost:8080/contacts/645792804a68f6f25a5e7f03 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"John",
+    "lastName":"Dough",
+    "email":"dough@test.com",
+    "favoriteColor":"Blue",
+    "birthday":"02/3/1999"
+}
+
+### Update contact
+DELETE http://localhost:8080/contacts/645792804a68f6f25a5e7f03 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"John",
+    "lastName":"Dough",
+    "email":"dough@test.com",
+    "favoriteColor":"Blue",
+    "birthday":"02/3/1999"
+}
+
+############# Production Deploy ################
+
