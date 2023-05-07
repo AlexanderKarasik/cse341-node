@@ -11,3 +11,44 @@ GET http://localhost:8080/contacts/644d92317139a2471d8a99ef
 
 ###
 GET http://localhost:8080/contacts/644d92627139a2471d8a99f0
+
+###
+GET https://alexanderkarasik-cse341-node-week2-py3v.onrender.com/contacts
+
+###
+GET https://alexanderkarasik-cse341-node-week2-py3v.onrender.com/contacts/644d91d07139a2471d8a99ee
+
+###
+GET https://alexanderkarasik-cse341-node-week2-py3v.onrender.com/contacts/644d92317139a2471d8a99ef
+
+###
+GET https://alexanderkarasik-cse341-node-week2-py3v.onrender.com/contacts/644d92627139a2471d8a99f0
+
+####### Week3 #########
+
+### Create contact
+POST http://localhost:8080/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Dow",
+    "email": "dow@test.com",
+    "favouriteColor": "Yellow",
+    "birthday": "5/1/1985"
+    };
+
+### Put contact
+PUT http://localhost:8080/contacts/644d92627139a2471d8a99f0 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Dow",
+    "email": "dow@test.com",
+    "favouriteColor": "Yellow",
+    "birthday": "5/1/1985"
+    };
+
+### Delete contact
+DELETE http://localhost:8080/contacts/644d92627139a2471d8a99f0 HTTP/1.1
