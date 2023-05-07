@@ -39,7 +39,7 @@ content-type: application/json
 }
 
 ### Update contact
-PUT http://localhost:8080/contacts/645792804a68f6f25a5e7f03 HTTP/1.1
+PUT http://localhost:8080/contacts/6457a9c39120719a83b75601 HTTP/1.1
 content-type: application/json
 
 {
@@ -50,8 +50,8 @@ content-type: application/json
     "birthday":"02/3/1999"
 }
 
-### Update contact
-DELETE http://localhost:8080/contacts/645792804a68f6f25a5e7f03 HTTP/1.1
+### Delete contact
+DELETE http://localhost:8080/contacts/6457a9c39120719a83b75601 HTTP/1.1
 content-type: application/json
 
 {
@@ -64,3 +64,38 @@ content-type: application/json
 
 ############# Production Deploy ################
 
+### Create contact
+POST https://cse341-node-week3.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Bred",
+    "lastName":"Pitt",
+    "email":"pit@test.com",
+    "favoriteColor":"Brown",
+    "birthday":"02/3/1999"
+}
+
+### Update contact
+PUT https://cse341-node-week3.onrender.com/contacts/6457adccb1e8f9e11bde8077 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"John",
+    "lastName":"Dough",
+    "email":"dough@test.com",
+    "favoriteColor":"Blue",
+    "birthday":"02/3/1999"
+}
+
+### Delete contact
+DELETE https://cse341-node-week3.onrender.com/contacts/6457adccb1e8f9e11bde8077 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"John",
+    "lastName":"Dough",
+    "email":"dough@test.com",
+    "favoriteColor":"Blue",
+    "birthday":"02/3/1999"
+}
