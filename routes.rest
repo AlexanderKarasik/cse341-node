@@ -89,7 +89,21 @@ content-type: application/json
 }
 
 ### Delete contact
-DELETE https://cse341-node-week3.onrender.com/contacts/645e7bc88a4e7f3ffea98cd5 HTTP/1.1
+DELETE https://cse341-node-week3.onrender.com/contacts/645feddc7da2a151d3034bac HTTP/1.1
+content-type: application/json
+
+
+### Api-docs
+GET https://alexanderkarasik-cse341-node-week4.onrender.com/api-docs/
+
+### Get all contacts
+GET https://alexanderkarasik-cse341-node-week4.onrender.com/contacts/
+
+### Get contacts by id
+GET https://alexanderkarasik-cse341-node-week4.onrender.com/contacts/645f52dcdd9b216be33b43ae
+
+### Post contact
+POST https://alexanderkarasik-cse341-node-week4.onrender.com/contacts/ HTTP/1.1
 content-type: application/json
 
 {
@@ -100,5 +114,18 @@ content-type: application/json
     "birthday":"02/3/1999"
 }
 
-### Api-docs
-GET https://alexanderkarasik-cse341-node-week4.onrender.com/api-docs/
+### Update contact
+PUT https://alexanderkarasik-cse341-node-week4.onrender.com/contacts/645ff608cb3dbc22cf2728c0 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Jack",
+    "lastName":"Whiting",
+    "email":"jack@test.com",
+    "favoriteColor":"Blue",
+    "birthday":"02/3/1999"
+}
+
+### Delete contact
+DELETE https://alexanderkarasik-cse341-node-week4.onrender.com/contacts/645ff608cb3dbc22cf2728c0 HTTP/1.1
+
