@@ -24,7 +24,7 @@ GET https://alexanderkarasik-cse341-node-week2-py3v.onrender.com/contacts/644d92
 ###
 GET https://alexanderkarasik-cse341-node-week2-py3v.onrender.com/contacts/644d92627139a2471d8a99f0
 
-####### Week3 #########
+####### Week 3 and 4 #########
 
 ### Create contact
 POST http://localhost:8080/contacts HTTP/1.1
@@ -99,3 +99,6 @@ content-type: application/json
     "favoriteColor":"Blue",
     "birthday":"02/3/1999"
 }
+
+### Api-docs
+GET https://alexanderkarasik-cse341-node-week4.onrender.com/api-docs/
