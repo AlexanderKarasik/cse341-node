@@ -5,7 +5,7 @@ const doc = {
     title: 'My API for CSE-341',
     description: 'Contacts API, week 4; personal assignment',
   },
-  host: 'https://alexanderkarasik-cse341-node-week4.onrender.com/',
+  host: 'https://alexanderkarasik-cse341-node-week4.onrender.com',
   schemes: ['http'],
 };
 
