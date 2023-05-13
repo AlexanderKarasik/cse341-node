@@ -1,13 +1,16 @@
-# How to run it
+# Contacts API
 
-Run npm install and npm start from the backend folder in the terminal
+This API is intended for a personal assignment in CSE 341 to learn how to use Swagger for API Documentation.
 
-Run frontend/index.html with live server or just paste the file path into a browser.
+## Instructions to run application
 
-## Environment variables
+- Run npm install in the terminal
+- npm start
 
-Don't forget to create the .env file. If you are unsure of how to do this, watch the stretch solution video.
+## Things to look out for
 
-### Video Walkthrough
+- Examine the routes and try a couple with your rest client.
+- If you try to run it, you'll get an authentication error from MongoDB.
+- Modify your .env file to include your mongoDB username and your db password.
 
-[Video Explanation of Stretch Assignment](https://youtu.be/S25ggtvC4AM)
+
