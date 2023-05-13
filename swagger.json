@@ -8,7 +8,7 @@
   "host": "alexanderkarasik-cse341-node-week4.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {

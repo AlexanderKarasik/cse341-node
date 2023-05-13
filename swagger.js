@@ -6,7 +6,7 @@ const doc = {
     description: 'Contacts API, week 4; personal assignment',
   },
   host: 'alexanderkarasik-cse341-node-week4.onrender.com',
-  schemes: ['http'],
+  schemes: ['https'],
 };
 
 const outputFile = './swagger.json';
