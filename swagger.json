@@ -5,19 +5,12 @@
     "description": "Football Players API, week 5; personal assignment",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "https://cse341-node-football-project.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {}
-      }
-    },
     "/manchester/": {
       "get": {
         "description": "",
