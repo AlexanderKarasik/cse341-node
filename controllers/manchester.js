@@ -14,6 +14,9 @@ const getAll = async (req, res, next) => {
   };
   
   const getSingle = async (req, res, next) => {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid player id to find a player.');
+    }
     try{
       const userId = new ObjectId(req.params.id);
       const result = await mongodb
@@ -45,7 +48,7 @@ const getAll = async (req, res, next) => {
     if (response.acknowledged) {
       res.status(201).json(response);
     } else {
-      res.status(500).json(response.error || 'Some error occurred while creating the contact.');
+      res.status(500).json(response.error || 'Some error occurred while creating the player.');
     }
   } catch (err) {
     res.status(500).json(err);
@@ -53,6 +56,9 @@ const getAll = async (req, res, next) => {
   };
 
   const updatePlayer = async (req, res) => {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid player id to update a player.');
+    }
     try{
       const userId = new ObjectId(req.params.id);
       const contact = {
@@ -69,7 +75,7 @@ const getAll = async (req, res, next) => {
       if (response.modifiedCount > 0) {
         res.status(204).send();
       } else {
-        res.status(500).json(response.error || 'Some error occurred while updating the contact.');
+        res.status(500).json(response.error || 'Some error occurred while updating the player.');
       }
   } catch (err) {
     res.status(500).json(err);
@@ -77,6 +83,9 @@ const getAll = async (req, res, next) => {
 };
 
   const deletePlayer = async (req, res) => {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid player id to delete a player.');
+    }
     try{
       const userId = new ObjectId(req.params.id);
       const response = await mongodb.getDb().db().collection('manchester').deleteOne({ _id: userId });
@@ -84,7 +93,7 @@ const getAll = async (req, res, next) => {
       if (response.deletedCount > 0) {
         res.status(204).send();
       } else {
-        res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
+        res.status(500).json(response.error || 'Some error occurred while deleting the player.');
       }
   } catch (err) {
     res.status(500).json(err);
