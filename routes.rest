@@ -1,20 +1,20 @@
 ######### Get Players by Team #############
 
-GET http://localhost:8080/manchester
+GET http://cse341-node-football-project.onrender.com/manchester
 
 ###
-GET http://localhost:8080/manchester/64691e8ad885379822501265
+GET http://cse341-node-football-project.onrender.com/manchester/64691e8ad885379822501265
 
 ###
-GET http://localhost:8080/barcelona
+GET http://cse341-node-football-project.onrender.com/barcelona
 
 ###
-GET http://localhost:8080/barcelona/646921d2d885379822501269
+GET http://cse341-node-football-project.onrender.com/barcelona/646921d2d885379822501269
 
 
 ######### Add Players #############
 
-POST http://localhost:8080/manchester HTTP/1.1
+POST http://cse341-node-football-project.onrender.com/manchester HTTP/1.1
 content-type: application/json
 
 {
@@ -28,7 +28,7 @@ content-type: application/json
 }
 
 ###
-POST http://localhost:8080/barcelona HTTP/1.1
+POST http://cse341-node-football-project.onrender.com/barcelona HTTP/1.1
 content-type: application/json
 
 {
@@ -41,126 +41,26 @@ content-type: application/json
     "debut": "16 JUN 2018"
 }
 
+########### Update Players ##############
 
-
-
-###
-GET http://localhost:8080/contacts/644d92627139a2471d8a99f0
-
-###
-GET https://alexanderkarasik-cse341-node-week2-py3v.onrender.com/contacts
-
-###
-GET https://alexanderkarasik-cse341-node-week2-py3v.onrender.com/contacts/644d91d07139a2471d8a99ee
-
-###
-GET https://alexanderkarasik-cse341-node-week2-py3v.onrender.com/contacts/644d92317139a2471d8a99ef
-
-###
-GET https://alexanderkarasik-cse341-node-week2-py3v.onrender.com/contacts/644d92627139a2471d8a99f0
-
-####### Week 3 and 4 #########
-
-### Create contact
-POST http://localhost:8080/contacts HTTP/1.1
+PUT http://cse341-node-football-project.onrender.com/manchester HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Bred",
-    "lastName":"Pitt",
-    "email":"pit@test.com",
-    "favoriteColor":"Brown",
-    "birthday":"02/3/1999"
+    "firstName":"Mason",
+    "lastName":"Greenwood",
+    "position":"forward",
+    "country": "England",
+    "birthday": "1 OKT 2001",
+    "joined": "1 JUL 2018",
+    "debut": "6 MAY 2019"
 }
 
-### Update contact
-PUT http://localhost:8080/contacts/6457a9c39120719a83b75601 HTTP/1.1
-content-type: application/json
+############ Delete Player ################
 
-{
-    "firstName":"John",
-    "lastName":"Dough",
-    "email":"dough@test.com",
-    "favoriteColor":"Blue",
-    "birthday":"02/3/1999"
-}
-
-### Delete contact
-DELETE http://localhost:8080/contacts/6457a9c39120719a83b75601 HTTP/1.1
-content-type: application/json
-
-{
-    "firstName":"John",
-    "lastName":"Dough",
-    "email":"dough@test.com",
-    "favoriteColor":"Blue",
-    "birthday":"02/3/1999"
-}
-
-############# Production Deploy ################
-
-### Create contact
-POST https://cse341-node-week3.onrender.com/contacts HTTP/1.1
-content-type: application/json
-
-{
-    "firstName":"Bred",
-    "lastName":"Pitt",
-    "email":"pit@test.com",
-    "favoriteColor":"Brown",
-    "birthday":"02/3/1999"
-}
-
-### Update contact
-PUT https://cse341-node-week3.onrender.com/contacts/645f52dcdd9b216be33b43ad HTTP/1.1
-content-type: application/json
-
-{
-    "firstName":"John",
-    "lastName":"Dough",
-    "email":"dough@test.com",
-    "favoriteColor":"Blue",
-    "birthday":"02/3/1999"
-}
-
-### Delete contact
-DELETE https://cse341-node-week3.onrender.com/contacts/645feddc7da2a151d3034bac HTTP/1.1
+DELETE http://cse341-node-football-project.onrender.com/manchester/64691e8ad885379822501265 HTTP/1.1
 content-type: application/json
 
 
-### Api-docs
-GET https://alexanderkarasik-cse341-node-week4.onrender.com/api-docs/
 
-### Get all contacts
-GET https://alexanderkarasik-cse341-node-week4.onrender.com/contacts/
-
-### Get contacts by id
-GET https://alexanderkarasik-cse341-node-week4.onrender.com/contacts/645f52dcdd9b216be33b43ae
-
-### Post contact
-POST https://alexanderkarasik-cse341-node-week4.onrender.com/contacts/ HTTP/1.1
-content-type: application/json
-
-{
-    "firstName":"John",
-    "lastName":"Dough",
-    "email":"dough@test.com",
-    "favoriteColor":"Blue",
-    "birthday":"02/3/1999"
-}
-
-### Update contact
-PUT https://alexanderkarasik-cse341-node-week4.onrender.com/contacts/645ff608cb3dbc22cf2728c0 HTTP/1.1
-content-type: application/json
-
-{
-    "firstName":"Jack",
-    "lastName":"Whiting",
-    "email":"jack@test.com",
-    "favoriteColor":"Blue",
-    "birthday":"02/3/1999"
-}
-
-### Delete contact
-DELETE https://alexanderkarasik-cse341-node-week4.onrender.com/contacts/645ff608cb3dbc22cf2728c0 HTTP/1.1
 
