@@ -345,5 +345,18 @@
         }
       }
     }
+  },
+  "security": {
+    "oauth2": {
+      "type": "oauth2",
+      "flows": {
+        "implicit": {
+          "scopes": {
+            "read": "Grants read access",
+            "write": "Grants write access"
+          }
+        }
+      }
+    }
   }
 }

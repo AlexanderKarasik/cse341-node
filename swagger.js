@@ -7,6 +7,22 @@ const doc = {
   },
   host: 'cse341-node-football-project.onrender.com',
   schemes: ['https'],
+
+  security: {
+    oauth2: {
+      type: "oauth2",
+      flows: {
+        implicit: {
+          authorizationUrl: process.env.ISSUER_BASE_URL,
+          scopes: {
+            read: "Grants read access",
+            write: "Grants write access"
+          }
+        }
+      }
+    }
+  }
+
 };
 
 const outputFile = './swagger.json';

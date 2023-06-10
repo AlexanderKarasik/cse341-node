@@ -7,7 +7,7 @@ const barController = require('../controllers/barcelona');
 const validation = require('../middleware/validate');
 
 
-router.get('/', barController.getAll);
+router.get('/', requiresAuth(), barController.getAll);
 
 router.get('/:id', barController.getSingle);
 
