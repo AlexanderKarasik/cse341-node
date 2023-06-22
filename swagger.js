@@ -5,8 +5,8 @@ const doc = {
     title: ' API for Football Players',
     description: 'Football Players API, week 5; personal assignment',
   },
-  host: 'cse341-node-football-project.onrender.com',
-  schemes: ['https'],
+  host: 'localhost:8080',
+  schemes: ['http'],
 
   security: {
     oauth2: {

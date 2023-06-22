@@ -1,14 +1,14 @@
 const validator = require('../helpers/validate');
 
-const savePlayer = async (req, res, next) => {
+const saveTask = async (req, res, next) => {
     const validationRule = {
-        "firstName": "required|string",
-        "lastName": "required|string",
-        "position": "required|string|min:3 ",
-        "country": "required|string",
-        "birthday": "string",
-        "joined": "string",
-        "debut": "string"
+        "taskName": "required|string",
+        "taskInitiator": "required|string",
+        "taskStartdate": "required",
+        "responsiblePerson": "required|string",
+        "taskDeadline": "required|string",
+        "taskOutcome": "required|string",
+        "assignedTeam": "required|string"
     };
 
 
@@ -25,6 +25,34 @@ await validator(req.body, validationRule, {}, (err, status) => {
     }
 }).catch( err => console.log(err))
 }
+
+const saveTeam = async (req, res, next) => {
+    const validationRule = {
+        "teamName": "required|string",
+        "teamMembers": "required|string",
+        "teamLeader": "required",
+        "teamProfile": "required|string",
+        "dateCreated": "required",
+    };
+
+
+await validator(req.body, validationRule, {}, (err, status) => {
+    if (!status) {
+        res.status(412)
+            .send({
+                success: false,
+                message: 'Validation failed',
+                data: err
+            });
+    } else {
+        next();
+    }
+}).catch( err => console.log(err))
+}
+
+
+
 module.exports = {
-savePlayer
+saveTask,
+saveTeam
 };

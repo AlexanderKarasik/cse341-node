@@ -5,13 +5,13 @@
     "description": "Football Players API, week 5; personal assignment",
     "version": "1.0.0"
   },
-  "host": "cse341-node-football-project.onrender.com",
+  "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
-    "https"
+    "http"
   ],
   "paths": {
-    "/manchester/": {
+    "/tasks/": {
       "get": {
         "description": "",
         "produces": [
@@ -36,25 +36,25 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "taskName": {
                   "example": "any"
                 },
-                "lastName": {
+                "taskInitiator": {
                   "example": "any"
                 },
-                "position": {
+                "taskStartdate": {
                   "example": "any"
                 },
-                "country": {
+                "responsiblePerson": {
                   "example": "any"
                 },
-                "birthday": {
+                "taskDeadline": {
                   "example": "any"
                 },
-                "joined": {
+                "taskOutcome": {
                   "example": "any"
                 },
-                "debut": {
+                "assignedTeam": {
                   "example": "any"
                 }
               }
@@ -65,16 +65,13 @@
           "201": {
             "description": "Created"
           },
-          "412": {
-            "description": "Precondition Failed"
-          },
           "500": {
             "description": "Internal Server Error"
           }
         }
       }
     },
-    "/manchester/{id}": {
+    "/tasks/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -115,25 +112,25 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "taskName": {
                   "example": "any"
                 },
-                "lastName": {
+                "taskInitiator": {
                   "example": "any"
                 },
-                "position": {
+                "taskStartdate": {
                   "example": "any"
                 },
-                "country": {
+                "responsiblePerson": {
                   "example": "any"
                 },
-                "birthday": {
+                "taskDeadline": {
                   "example": "any"
                 },
-                "joined": {
+                "taskOutcome": {
                   "example": "any"
                 },
-                "debut": {
+                "assignedTeam": {
                   "example": "any"
                 }
               }
@@ -146,9 +143,6 @@
           },
           "400": {
             "description": "Bad Request"
-          },
-          "412": {
-            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -178,7 +172,7 @@
         }
       }
     },
-    "/barcelona/": {
+    "/teams/": {
       "get": {
         "description": "",
         "produces": [
@@ -203,25 +197,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "teamName": {
                   "example": "any"
                 },
-                "lastName": {
+                "teamMembers": {
                   "example": "any"
                 },
-                "position": {
+                "teamLeader": {
                   "example": "any"
                 },
-                "country": {
+                "teamProfile": {
                   "example": "any"
                 },
-                "birthday": {
-                  "example": "any"
-                },
-                "joined": {
-                  "example": "any"
-                },
-                "debut": {
+                "dateCreated": {
                   "example": "any"
                 }
               }
@@ -241,7 +229,7 @@
         }
       }
     },
-    "/barcelona/{id}": {
+    "/teams/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -282,25 +270,19 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
+                "teamName": {
                   "example": "any"
                 },
-                "lastName": {
+                "teamMembers": {
                   "example": "any"
                 },
-                "position": {
+                "teamLeader": {
                   "example": "any"
                 },
-                "country": {
+                "teamProfile": {
                   "example": "any"
                 },
-                "birthday": {
-                  "example": "any"
-                },
-                "joined": {
-                  "example": "any"
-                },
-                "debut": {
+                "dateCreated": {
                   "example": "any"
                 }
               }

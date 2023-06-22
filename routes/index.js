@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.use('/', require('./swagger'));
-router.use('/manchester', require('./manchester'));
-router.use('/barcelona', require('./barcelona'));
+router.use('/tasks', require('./tasks'));
+router.use('/teams', require('./teams'));
 
 module.exports = router;
