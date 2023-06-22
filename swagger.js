@@ -5,8 +5,8 @@ const doc = {
     title: ' API for Football Players',
     description: 'Football Players API, week 5; personal assignment',
   },
-  host: 'localhost:8080',
-  schemes: ['http'],
+  host: 'task-master-lhx0.onrender.com',
+  schemes: ['https'],
 
   security: {
     oauth2: {
