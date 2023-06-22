@@ -2,8 +2,8 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: ' API for Football Players',
-    description: 'Football Players API, week 5; personal assignment',
+    title: ' Task-master API',
+    description: 'Task-master API, CSE-341, Final Team Project',
   },
   host: 'task-master-lhx0.onrender.com',
   schemes: ['https'],

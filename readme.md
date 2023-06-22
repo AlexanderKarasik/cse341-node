@@ -1,6 +1,6 @@
 # Football Players API
 
-This API is intended for a personal assignment in CSE 341.
+This API is intended for a team assignment in CSE 341.
 
 ## Instructions to run application
 
