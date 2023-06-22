@@ -1,4 +1,4 @@
-# Football Players API
+# Task-master API
 
 This API is intended for a team assignment in CSE 341.
 
